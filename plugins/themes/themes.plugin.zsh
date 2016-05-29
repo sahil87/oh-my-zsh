@@ -10,9 +10,9 @@ function theme
     else
 	if [ -f "$ZSH_CUSTOM/$1.zsh-theme" ]
 	then
-	    source "$ZSH_CUSTOM/$1.zsh-theme"
+	    export RPROMPT=''; source "$ZSH_CUSTOM/$1.zsh-theme"
 	else
-	    source "$ZSH/themes/$1.zsh-theme"
+	    export RPROMPT=''; source "$ZSH/themes/$1.zsh-theme"
 	fi
     fi
 }
